@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>宇都宮アパートメント「ブリランテ」</title>
+    <meta
+      name="description"
+      content="宇都宮アパートメント「ブリランテ」は宇都宮市の賃貸アパートです。お部屋はリフォーム済みで明るいイメージです。所在地は江曽島駅から徒歩６分の場所にあります。"
+    />
+    <meta name="keywords" content=" アパート,一人暮らし,宇都宮" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="general.css" />
+    <link
+      rel="stylesheet"
+      href="https://static.spearly.com/css/spearly-richtext.min.css"
+      type="text/css"
+    />
+    <link
+      href="http://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css"
+      rel="stylesheet"
+    />
+    <script src="https://static.spearly.com/js/cms.js" defer></script>
+    <script>
+      window.addEventListener(
+        "DOMContentLoaded",
+        () => {
+          const t = document.querySelectorAll(":not(:defined)");
+          for (const e of t) {
+            e.style.visibility = "hidden";
+          }
+          window.spearly.config.AUTH_KEY =
+            "TMipNl_gbkMGj5aYa07rRH0r7R_xUzVbTlTXWCmbRoc";
+        },
+        { once: true }
+      );
+    </script>
+  </head>
+  <body>
+    <header id="top-head">
+      <div class="inner">
+        <div id="mobile-head">
+          <a class="brand" href="summary.html"
+            >宇都宮アパートメント「ブリランテ」</a
+          >
+          <div id="nav-toggle">
+            <div>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <nav id="global-nav">
+          <ul>
+            <li><a class="list-1" href="summary.html">物件概要</a></li>
+            <li><a class="list-2" href="gallery.html">ギャラリー</a></li>
+            <li><a class="list-2" href="archives.html">お知らせ</a></li>
+            <li><a class="list-3" href="profile.html">管理人情報</a></li>
+            <li><a class="list-4" href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div id="background">
+        <div class="article general">
+          <h1><span>ARTICLE</span></h1>
+          <section>
+            <article-item>
+              <img src="{%= article_image %}" class="image fit" />
+              <p>{%= article_date %}</p>
+              <h1>{%= article_title %}</h1>
+              <div>{%= article_body %}</div>
+            </article-item>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <nav id="under-nav">
+        <ul>
+          <li class="minimini"><a href="">MINIMINI</a></li>
+          <li class="homes"><a href="">HOME'S</a></li>
+          <li class="suumo"><a href="">SUUMO</a></li>
+        </ul>
+      </nav>
+      <small>© Haruko Watanabe</small>
+    </footer>
+    <script type="text/javascript" src="general.js"></script>
+  </body>
+</html>

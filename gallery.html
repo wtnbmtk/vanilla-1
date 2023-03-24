@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>宇都宮アパートメント「ブリランテ」</title>
+    <meta
+      name="description"
+      content="宇都宮アパートメント「ブリランテ」は宇都宮市の賃貸アパートです。お部屋はリフォーム済みで明るいイメージです。所在地は江曽島駅から徒歩６分の場所にあります。"
+    />
+    <meta name="keywords" content=" アパート,一人暮らし,宇都宮" />
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="stylesheet" href="general.css" />
+    <link rel="stylesheet" href="luminous-basic.min.css" />
+    <link
+      href="http://netdna.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header id="top-head">
+      <div class="inner">
+        <div id="mobile-head">
+          <a class="brand" href="summary.html"
+            >宇都宮アパートメント「ブリランテ」</a
+          >
+          <div id="nav-toggle">
+            <div>
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+        <nav id="global-nav">
+          <ul>
+            <li><a class="list-1" href="summary.html">物件概要</a></li>
+            <li><a class="list-2" href="gallery.html">ギャラリー</a></li>
+            <li><a class="list-2" href="archives.html">お知らせ</a></li>
+            <li><a class="list-3" href="profile.html">管理人情報</a></li>
+            <li><a class="list-4" href="contact.html">お問い合わせ</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div id="background">
+        <div class="gallery general">
+          <h1><span>GALLERY</span></h1>
+          <div class="gridGallery">
+            <a class="luminous item" href="images/g04.jpeg"
+              ><img class="thumb" src="images/g04.jpeg" alt=""
+            /></a>
+            <a class="luminous item" href="images/g05.jpeg"
+              ><img class="thumb" src="images/g05.jpeg" alt=""
+            /></a>
+            <a class="luminous item" href="images/g10.jpeg"
+              ><img class="thumb" src="images/g10.jpeg" alt=""
+            /></a>
+            <a class="luminous item" href="images/g11.jpeg"
+              ><img class="thumb" src="images/g11.jpeg" alt=""
+            /></a>
+            <a class="luminous item" href="images/g12.jpeg"
+              ><img class="thumb" src="images/g12.jpeg" alt=""
+            /></a>
+            <a class="luminous item" href="images/g13.jpeg"
+              ><img class="thumb" src="images/g13.jpeg" alt=""
+            /></a>
+            <a class="luminous item" href="images/g14.jpeg"
+              ><img class="thumb" src="images/g14.jpeg" alt=""
+            /></a>
+            <a class="luminous item" href="images/g20.jpeg"
+              ><img class="thumb" src="images/g20.jpeg" alt=""
+            /></a>
+            <a class="luminous item" href="images/g18.jpeg"
+              ><img class="thumb" src="images/g18.jpeg" alt=""
+            /></a>
+            <a class="luminous item" href="images/g19.jpeg"
+              ><img class="thumb" src="images/g19.jpeg" alt=""
+            /></a>
+            <a class="luminous item" href="images/g22.jpeg"
+              ><img class="thumb" src="images/g22.jpeg" alt=""
+            /></a>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <nav id="under-nav">
+        <ul>
+          <li class="minimini"><a href="">MINIMINI</a></li>
+          <li class="homes"><a href="">HOME'S</a></li>
+          <li class="suumo"><a href="">SUUMO</a></li>
+        </ul>
+      </nav>
+      <small>© Haruko Watanabe</small>
+    </footer>
+    <script type="text/javascript" src="general.js"></script>
+    <script type="text/javascript" src="luminous.min.js"></script>
+    <script>
+      //img 要素の alt 属性の値をキャプションとして表示するためのオプション
+      const luminousOpts = {
+        caption: (trigger) => {
+          return trigger.querySelector("img").getAttribute("alt");
+        },
+      };
+
+      //全ての luminous クラスを指定した a 要素を取得
+      const luminousGalleryElems = document.querySelectorAll(".luminous");
+      //取得した要素が１つ以上あれば Luminous Lightbox を初期化
+      if (luminousGalleryElems.length > 0) {
+        new LuminousGallery(luminousGalleryElems, {}, luminousOpts);
+      }
+
+      //画像の先読み
+      //拡大画像へのリンク要素は上記の luminousGalleryElems で取得されているのでそれを利用
+      for (let i = 0; i < luminousGalleryElems.length; i++) {
+        // img 要素を生成
+        const img = document.createElement("img");
+        // img 要素の src 属性にリンクの href 属性の値を設定
+        img.src = luminousGalleryElems[i].href;
+      }
+    </script>
+  </body>
+</html>
