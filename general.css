@@ -22,6 +22,9 @@ body {
   margin: 0px;
   padding: 0px;
 }
+ul {
+  padding: 0;
+}
 li {
   list-style: none;
 }
@@ -50,15 +53,10 @@ header {
   border-bottom: 1px solid #ddd;
   background-color: #fff;
 }
-#top-head .inner {
-  position: relative;
-  width: 100%;
-  height: 50px;
-  line-height: 50px;
-  margin: 0 auto;
+.brand {
+  padding-left: 8px;
 }
-#top-head a {
-  margin-left: 12px;
+#top-head a{
   color: #333;
 }
 #top-head img {
@@ -70,15 +68,17 @@ header {
 #global-nav {
   position: absolute;
   inset: 0 0 0 auto;
-  line-height: 1;
+}
+#global-nav ul {
+  margin: 0;
 }
 #global-nav li {
   display: inline-block;
   text-align: center;
+  padding: 0 8px;
 }
 #global-nav ul li a {
-  display: block;
-  margin: 0 8px;
+  width: 100%;
 }
 /* Fixed */
 #top-head.fixed {
@@ -142,15 +142,17 @@ section {
   width: 90%;
   margin: 0 auto;
   max-width: 276px;
+  padding: 8px 0;
 }
-.contents {
-  padding: 8px 0 8px;
+#summary h2 {
+  margin-top: 0;
 }
-.contents h1 {
+#profile h2,
+#contact h2 {
   text-align: center;
   margin: 0 auto 1rem;
 }
-.contents h2 {
+.contents h3 {
   margin-top: 0;
 }
 .contents:nth-child(n + 2) {
@@ -160,10 +162,15 @@ section {
   border-bottom: solid 2px;
 }
 .image {
-  display: block;
+  width: 276px;
   margin: 0 auto;
+}
+#summary .image {
   padding: 2rem 0;
-  width: 280px;
+}
+#profile .image,
+#contact .image {
+  padding: 1rem 0;
 }
 #profile img {
   width: 200px;
@@ -360,13 +367,10 @@ footer #under-nav a:hover::after {
     position: absolute;
     background: #333;
     width: 100%;
-    text-align: center;
-    padding: 10px 0;
     inset: auto;
   }
   #global-nav ul {
     position: static;
-    padding: 0;
     font-size: 14px;
   }
   #global-nav li {
@@ -375,7 +379,6 @@ footer #under-nav a:hover::after {
   #top-head #global-nav ul li a,
   #top-head.fixed #global-nav ul li a {
     color: #fff;
-    padding: 18px 0;
   }
   #nav-toggle {
     display: block;
