@@ -1,4 +1,5 @@
-@font-face {
+@import url("https://fonts.googleapis.com/css2?family=Chivo+Mono:wght@300&family=Noto+Sans+JP:wght@300&display=swap");
+/* @font-face {
   font-family: "Voto Serif GX";
   src: url("VotoSerifGX.ttf") format("truetype-variations");
   font-weight: 28 194;
@@ -6,7 +7,7 @@
   font-optical-sizing: auto;
   font-style: normal;
   font-display: swap;
-}
+} */
 *,
 *::before,
 *::after {
@@ -16,8 +17,10 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  font: 1.2em "Voto Serif GX", serif;
-  font-variation-settings: "wght" 100, "wdth" 80, "opsz" 50;
+  font-family: "Noto Sans JP", sans-serif, "Chivo Mono", monospace;
+  font-size: medium;
+  /* font: 1.2em "Voto Serif GX", serif;
+  font-variation-settings: "wght" 100, "wdth" 80, "opsz" 50; */
   margin: 0px;
   padding: 0px;
 }
@@ -35,7 +38,6 @@ img,
 picture {
   display: block;
   max-width: 100%;
-  width: inherit;
 }
 
 /* HEAD */
@@ -60,17 +62,20 @@ picture {
   background-color: rgba(255, 255, 255, 0.7);
   transition: top 0.65s ease-in;
 }
-#TopHeader.fixed #mobile-head {
-  height: 50px;
-}
 #mobile-head {
   width: fit-content;
+}
+#TopHeader.fixed #mobile-head {
+  height: 50px;
 }
 .brand {
   display: block;
   margin-left: 16px;
   height: 50px;
   width: 50px;
+}
+.brand img {
+  height: inherit;
 }
 #TopHeader.fixed .brand {
   height: 50px;
@@ -211,13 +216,30 @@ main {
 .contents:nth-child(n + 2) h2 {
   text-align: center;
 }
-.contents:nth-child(3) .image img {
+.DataGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+.DataGrid p {
+  margin-top: 0;
+}
+.DataGrid dl {
+  display: grid;
+  grid-template-columns: max-content auto;
+}
+.DataGrid dt {
+  margin-left: 1rem;
+}
+#profile .image img {
   max-width: 80px;
   border-radius: 50%;
 }
-.contents:nth-child(3) .text {
+#profile .text {
   max-width: 400px;
   margin: auto;
+}
+#profile .text h3 {
+  text-align: center;
 }
 .FormGrid {
   display: grid;
@@ -461,6 +483,9 @@ footer #under-nav a:hover::after {
   }
   .contents:nth-child(n + 2) {
     max-width: 800px;
+  }
+  .DataGrid {
+    grid-template-columns: 1fr 1fr;
   }
   .gridGallery {
     grid-template-columns: 1fr 1fr 1fr 1fr;
