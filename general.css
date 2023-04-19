@@ -216,19 +216,43 @@ main {
 .contents:nth-child(n + 2) h2 {
   text-align: center;
 }
-.DataGrid {
-  display: grid;
-  grid-template-columns: 1fr;
-}
 .DataGrid p {
   margin-top: 0;
 }
 .DataGrid dl {
   display: grid;
-  grid-template-columns: max-content auto;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-auto-flow: row;
+  border-right: solid 1px black;
+  border-left: solid 1px black;
+  margin-bottom: 0;
 }
 .DataGrid dt {
-  margin-left: 1rem;
+  border-top: solid 1px black;
+  background-color: blueviolet;
+  color: white;
+}
+.DataGrid dt:nth-of-type(5) {
+  border-bottom: solid 1px black;
+}
+.DataGrid dd {
+  margin: 0;
+  border-top: solid 1px black;
+  border-left: solid 1px black;
+  padding-left: 1rem;
+}
+.DataGrid dd:nth-of-type(9),
+.DataGrid dd:nth-of-type(10) {
+  border-bottom: solid 1px black;
+}
+.DataGrid span {
+  font-size: x-small;
+  vertical-align: top;
+}
+.DataGrid p {
+  font-size: small;
+  margin-bottom: 0;
 }
 #profile .image img {
   max-width: 80px;
@@ -483,9 +507,6 @@ footer #under-nav a:hover::after {
   }
   .contents:nth-child(n + 2) {
     max-width: 800px;
-  }
-  .DataGrid {
-    grid-template-columns: 1fr 1fr;
   }
   .gridGallery {
     grid-template-columns: 1fr 1fr 1fr 1fr;
