@@ -45,10 +45,10 @@ picture {
   container: header / inline-size;
   position: absolute;
   top: -50px;
-  margin: 50px auto 0;
   width: 100%;
   height: 50px;
   line-height: 50px;
+  margin: 50px auto 0;
   z-index: 999;
 }
 /* Fixed */
@@ -59,8 +59,8 @@ picture {
   line-height: 50px;
   margin-top: 0;
   padding-top: 0;
-  background-color: rgba(255, 255, 255, 0.7);
-  transition: top 0.65s ease-in;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: top 0.5s ease-in-out;
 }
 #mobile-head {
   width: fit-content;
@@ -81,46 +81,14 @@ picture {
   height: 50px;
   width: 50px;
 }
-#nav-toggle {
+#ToggleButton {
   display: block;
   position: absolute;
-  right: 8px;
-  top: 16px;
-  width: 24px;
-  height: 18px;
+  inset: 0 8px 0 auto;
+  height: 50px;
   cursor: pointer;
-  z-index: 101;
-}
-#nav-toggle span {
-  display: block;
-  position: absolute;
-  height: 2px;
-  width: 100%;
-  background-color: black;
-  left: 0;
-  transition: 0.35s ease-in-out;
-}
-#nav-toggle span:nth-child(1) {
-  top: 0;
-}
-#nav-toggle span:nth-child(2) {
-  top: 8px;
-}
-#nav-toggle span:nth-child(3) {
-  top: 16px;
-}
-/* #nav-toggle 切り替えアニメーション */
-.open #nav-toggle span:nth-child(1) {
-  top: 10px;
-  transform: rotate(315deg);
-}
-.open #nav-toggle span:nth-child(2) {
-  width: 0;
-  left: 50%;
-}
-.open #nav-toggle span:nth-child(3) {
-  top: 10px;
-  transform: rotate(-315deg);
+  background-color: transparent;
+  border: none;
 }
 #global-nav,
 #headerSNS {
@@ -170,13 +138,12 @@ main {
   display: block;
   visibility: hidden;
 }
-.contents:nth-child(1)::before {
+.contents p {
+  text-align: justify;
+}
+#TopView:before {
   margin-top: -100px;
   height: 100px;
-}
-.contents:nth-child(n + 2)::before {
-  margin-top: -50px;
-  height: 50px;
 }
 #TopView {
   background: linear-gradient(220.55deg, #a531dc 0%, #4300b1 100%);
@@ -210,10 +177,17 @@ main {
 .TopContents .image img {
   max-width: 250px;
 }
+.contents:nth-child(n + 2)::before {
+  margin-top: -50px;
+  height: 50px;
+}
 .contents:nth-child(n + 2) {
   padding: 0 1rem;
 }
 .contents:nth-child(n + 2) h2 {
+  text-align: center;
+}
+.contents:nth-child(n + 2) h3 {
   text-align: center;
 }
 .DataGrid p {
@@ -264,6 +238,9 @@ main {
 }
 #profile .text h3 {
   text-align: center;
+}
+#form h1 {
+  display: none;
 }
 .FormGrid {
   display: grid;
@@ -455,7 +432,7 @@ footer #under-nav a:hover::after {
     width: 100px;
   }
   /* Toggle Button */
-  #nav-toggle {
+  #ToggleButton {
     display: none;
   }
   #global-nav,

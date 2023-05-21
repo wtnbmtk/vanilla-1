@@ -11,26 +11,6 @@
     <meta name="keywords" content=" Web制作,Webデザイン,フロントエンド開発" />
     <link rel="shortcut icon" href="images/favicon.ico" />
     <link rel="stylesheet" href="general.css" />
-    <link
-      rel="stylesheet"
-      href="https://static.spearly.com/css/spearly-richtext.min.css"
-      type="text/css"
-    />
-    <script src="https://static.spearly.com/js/cms.js" defer></script>
-    <script>
-      window.addEventListener(
-        "DOMContentLoaded",
-        () => {
-          const t = document.querySelectorAll(":not(:defined)");
-          for (const e of t) {
-            e.style.visibility = "hidden";
-          }
-          window.spearly.config.AUTH_KEY =
-            "TMipNl_gbkMGj5aYa07rRH0r7R_xUzVbTlTXWCmbRoc";
-        },
-        { once: true }
-      );
-    </script>
   </head>
   <body>
     <header>
@@ -39,13 +19,7 @@
           <a class="brand" href="summary.html"
             ><img src="images/logo1.svg" alt="logo"
           /></a>
-          <div id="nav-toggle">
-            <div>
-              <span></span>
-              <span></span>
-              <span></span>
-            </div>
-          </div>
+          <button id="ToggleButton" class="btn" type="button">MENU</button>
         </div>
         <nav id="global-nav">
           <ul>
@@ -82,17 +56,18 @@
       </section>
       <section id="summary" class="contents">
         <div class="text">
-          <h2><span>SUMMARY</span></h2>
           <h3>VISION</h3>
           <p>
             現代では対話型AIなどの様々な便利なテクノロジーの登場により、創造するプロセスの効率化は格段に向上しています。テクノロジーを駆使した効率的なクリエイティブは、ビジネスにおいてクリエイターとクライアントとの繋がりを強化します。ウェブダチは人々がお互いを思い遣り、助け合うことで生まれるクリエイティブを思い描いています。
           </p>
           <h3>WORKFLOW</h3>
-          <p>1. LINE公式アカウントに相談を受け付け</p>
-          <p>2. サイトデザインについてヒアリング</p>
-          <p>3. コーディング作業</p>
-          <p>4. サイトを公開</p>
-          <p>5. 継続的にサイト運営をサポート</p>
+          <ol>
+            <li>LINE公式アカウントに相談を受け付け</li>
+            <li>サイトデザインについてヒアリング</li>
+            <li>コーディング作業</li>
+            <li>サイトを公開</li>
+            <li>継続的にサイト運営をサポート</li>
+          </ol>
           <h3>PRICES&DETAILS</h3>
           <div class="DataGrid">
             <dl>
@@ -119,70 +94,27 @@
       </section>
       <section id="profile" class="contents">
         <div>
-          <h2><span>PROFILE</span></h2>
+          <h3>PROFILE</h3>
           <div class="image">
             <img src="images/profile.jpeg" alt="profile" />
           </div>
           <div class="text">
             <h3>モトキ</h3>
             <p>
-              東京工芸大学メディア画像学科卒。同大学在学中にWeb開発のスキルを身に付け始める。卒業後は大手製造業に従事するかたわらで、友人からの依頼でサイト制作を行ったり、個人プロジェクトを始めてWeb開発のスキルを磨いてきた。
+              東京工芸大学メディア画像学科卒。同大学在学中にWeb開発のスキルを身に付け始める。現在では、HTML、CSS、JavaScriptをはじめ、ReactやNext.jsなどのスキルを身に付け、フロントエンドの開発を得意としている。また、UI/UXデザインやSEOの知識を豊富に持っており、ユーザーが使いやすく、魅力的なWebサイト制作が行える。実績としては制作依頼を通して実践的なWeb開発の経験を積んでおり、ユーザーファーストな開発で評価されてきた。
             </p>
           </div>
         </div>
       </section>
       <section id="contact" class="contents">
         <div>
-          <h2><span>CONTACT</span></h2>
-          <spearly-form
-            data-api-key="TMipNl_gbkMGj5aYa07rRH0r7R_xUzVbTlTXWCmbRoc"
-            data-form-id="f-SgaP9VtrjpXoqJbDOh70"
-          >
-            <h2>{%= form_title %}</h2>
-            <p>{%= form_description %}</p>
-            <div class="FormGrid">
-              <div>
-                <div>
-                  <h3>{%= form_label_name %}</h3>
-
-                  <p>{%= form_description_name %}</p>
-
-                  {%= form_name %}
-                </div>
-                <div>
-                  <h3>{%= form_label_furigana %}</h3>
-
-                  <p>{%= form_description_furigana %}</p>
-
-                  {%= form_furigana %}
-                </div>
-                <div>
-                  <h3>{%= form_label_mail %}</h3>
-
-                  <p>{%= form_description_mail %}</p>
-
-                  {%= form_mail %}
-                </div>
-                <div>
-                  <h3>{%= form_label_number %}</h3>
-
-                  <p>{%= form_description_number %}</p>
-
-                  {%= form_number %}
-                </div>
-              </div>
-              <div>
-                <div>
-                  <h3>{%= form_label_content %}</h3>
-
-                  <p>{%= form_description_content %}</p>
-
-                  {%= form_content %}
-                </div>
-              </div>
-            </div>
-            <button type="submit">送信</button>
-          </spearly-form>
+          <h3>CONTACT</h3>
+          <iframe
+            id="form"
+            style="border: none; width: 100%"
+            height="691px"
+            src="https://www.noway-form.com/ja/f/9b90dc54-ca75-4bf9-83ea-cf7dfe43908b/embed"
+          ></iframe>
         </div>
       </section>
     </main>
@@ -196,7 +128,6 @@
                 <a href="https://lin.ee/VTOX579">LINE</a>
               </li>
               <li class="homes"><a href="">Twitter</a></li>
-              <li class="suumo"><a href="">Instagram</a></li>
             </ul>
           </nav>
         </div>
