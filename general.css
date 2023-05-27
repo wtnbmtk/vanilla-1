@@ -391,17 +391,17 @@ footer #under-nav a::after {
   border-right: 2px solid #333;
   border-bottom: 2px solid #333;
 }
-footer #under-nav .minimini a:hover {
+footer #under-nav .link1 a:hover {
   background-color: #07b53b;
   color: #fff;
   transition: all 0.7s;
 }
-footer #under-nav .homes a:hover {
+footer #under-nav .link2 a:hover {
   background-color: #1d9bf0;
   color: #fff;
   transition: all 0.7s;
 }
-footer #under-nav .suumo a:hover {
+footer #under-nav .link3 a:hover {
   background-color: #7215ec;
   color: #fff;
   transition: all 0.7s;
