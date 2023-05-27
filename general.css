@@ -228,6 +228,10 @@ main {
   font-size: small;
   margin-bottom: 0;
 }
+.prices {
+  text-decoration: underline;
+  color: blue;
+}
 #profile .image img {
   max-width: 80px;
   border-radius: 50%;
