@@ -34,10 +34,3 @@ anchorTags.forEach(function (anchorTag) {
     Button.innerHTML = "MENU";
   });
 });
-
-document.querySelector("iframe").src = document.querySelector("iframe").src;
-const iframe =
-  document.querySelector("iframe").contentDocument.documentElement.innerHTML;
-console.log(iframe);
-const element = iframe.querySelector("body");
-console.log(element);
