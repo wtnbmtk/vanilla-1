@@ -133,6 +133,7 @@ picture {
 main {
   container: main / inline-size;
   background-color: white;
+  margin: 50px 0 0 0;
 }
 .contents {
   margin: auto;
