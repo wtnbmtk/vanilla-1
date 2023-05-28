@@ -27,8 +27,14 @@ body {
 ul {
   padding: 0;
 }
-li {
+ul li {
   list-style: none;
+}
+ul li a:hover {
+  text-decoration: underline;
+}
+ol {
+  padding-left: 16px;
 }
 a {
   text-decoration: none;
@@ -61,6 +67,7 @@ picture {
   padding-top: 0;
   background-color: rgba(255, 255, 255, 0.8);
   transition: top 0.5s ease-in-out;
+  backdrop-filter: blur(8px);
 }
 #mobile-head {
   width: fit-content;
@@ -125,8 +132,6 @@ picture {
 /* MAIN */
 main {
   container: main / inline-size;
-  margin: 0 auto;
-  margin: 50px 0 0 0;
   background-color: white;
 }
 .contents {
@@ -190,6 +195,7 @@ main {
 .contents:nth-child(n + 2) h3 {
   text-align: center;
 }
+
 .DataGrid p {
   margin-top: 0;
 }

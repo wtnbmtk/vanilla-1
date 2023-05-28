@@ -13,22 +13,20 @@
     <link rel="stylesheet" href="general.css" />
   </head>
   <body>
-    <header>
-      <div id="TopHeader">
-        <div id="mobile-head">
-          <a class="brand" href="summary.html"
-            ><img src="images/logo1.svg" alt="logo"
-          /></a>
-          <button id="ToggleButton" class="btn" type="button">MENU</button>
-        </div>
-        <nav id="global-nav">
-          <ul>
-            <li><a class="list-1" href="#summary">概要</a></li>
-            <li><a class="list-3" href="#profile">プロフィール</a></li>
-            <li><a class="list-4" href="#contact">お問い合わせ</a></li>
-          </ul>
-        </nav>
+    <header id="TopHeader">
+      <div id="mobile-head">
+        <a class="brand" href="summary.html"
+          ><img src="images/logo1.svg" alt="logo"
+        /></a>
+        <button id="ToggleButton" class="btn" type="button">MENU</button>
       </div>
+      <nav id="global-nav">
+        <ul>
+          <li><a class="list-1" href="#summary">概要</a></li>
+          <li><a class="list-3" href="#profile">プロフィール</a></li>
+          <li><a class="list-4" href="#contact">お問い合わせ</a></li>
+        </ul>
+      </nav>
     </header>
 
     <main>
@@ -55,68 +53,64 @@
         </div>
       </section>
       <section id="summary" class="contents">
-        <div class="text">
-          <h3>VISION</h3>
+        <h3>VISION</h3>
+        <p>
+          現代では対話型AIなどの様々な便利なテクノロジーの登場により、創造するプロセスの効率化は格段に向上しています。テクノロジーを駆使した効率的なクリエイティブは、ビジネスにおいてクリエイターとクライアントとの繋がりを強化します。ウェブダチは人々がお互いを思い遣り、助け合うことで生まれるクリエイティブを思い描いています。
+        </p>
+        <h3>WORKFLOW</h3>
+        <ol>
+          <li>LINE公式アカウントに相談を受け付け</li>
+          <li>サイトデザインについてヒアリング</li>
+          <li>コーディング作業</li>
+          <li>サイトを公開</li>
+          <li>継続的にサイト運営をサポート</li>
+        </ol>
+        <h3>PRICES&DETAILS</h3>
+        <div class="DataGrid">
+          <dl>
+            <dt>プラン名</dt>
+            <dd>シンプルプラン</dd>
+            <dd>CMS実装プラン</dd>
+            <dt>制作費</dt>
+            <dd>60,000円</dd>
+            <dd>90,000円</dd>
+            <dt>運営費</dt>
+            <dd>
+              ウェブダチでの管理費2,000円/月+Cloudflare Pages<span>*1</span>の<a
+                class="prices"
+                href="https://pages.cloudflare.com/#pricing"
+                target="_blank"
+                >利用料</a
+              >
+            </dd>
+            <dd>
+              ウェブダチでの管理費2,000円/月+Cloudflare Pages<span>*1</span>の<a
+                class="prices"
+                href="https://pages.cloudflare.com/#pricing"
+                target="_blank"
+                >利用料</a
+              >
+            </dd>
+            <dt>CMS利用料</dt>
+            <dd>なし（非対応）</dd>
+            <dd>
+              Newt<span>*2</span>の<a
+                class="prices"
+                href="https://www.newt.so/plan202304"
+                target="_blank"
+                >利用料</a
+              >
+            </dd>
+            <dt>固定ページ数</dt>
+            <dd>A4サイズ3ページ分まで</dd>
+            <dd>A4サイズ3ページ分まで</dd>
+          </dl>
+          <p>*価格は全て税込価格です。</p>
           <p>
-            現代では対話型AIなどの様々な便利なテクノロジーの登場により、創造するプロセスの効率化は格段に向上しています。テクノロジーを駆使した効率的なクリエイティブは、ビジネスにおいてクリエイターとクライアントとの繋がりを強化します。ウェブダチは人々がお互いを思い遣り、助け合うことで生まれるクリエイティブを思い描いています。
+            *1 Cloudflare PagesはCloudflare,
+            Inc.が提供するホスティングサービスです。
           </p>
-          <h3>WORKFLOW</h3>
-          <ol>
-            <li>LINE公式アカウントに相談を受け付け</li>
-            <li>サイトデザインについてヒアリング</li>
-            <li>コーディング作業</li>
-            <li>サイトを公開</li>
-            <li>継続的にサイト運営をサポート</li>
-          </ol>
-          <h3>PRICES&DETAILS</h3>
-          <div class="DataGrid">
-            <dl>
-              <dt>プラン名</dt>
-              <dd>シンプルプラン</dd>
-              <dd>CMS実装プラン</dd>
-              <dt>制作費</dt>
-              <dd>60,000円</dd>
-              <dd>90,000円</dd>
-              <dt>運営費</dt>
-              <dd>
-                ウェブダチでの管理費2,000円/月+Cloudflare
-                Pages<span>*1</span>の<a
-                  class="prices"
-                  href="https://pages.cloudflare.com/#pricing"
-                  target="_blank"
-                  >利用料</a
-                >
-              </dd>
-              <dd>
-                ウェブダチでの管理費2,000円/月+Cloudflare
-                Pages<span>*1</span>の<a
-                  class="prices"
-                  href="https://pages.cloudflare.com/#pricing"
-                  target="_blank"
-                  >利用料</a
-                >
-              </dd>
-              <dt>CMS利用料</dt>
-              <dd>なし（非対応）</dd>
-              <dd>
-                Newt<span>*2</span>の<a
-                  class="prices"
-                  href="https://www.newt.so/plan202304"
-                  target="_blank"
-                  >利用料</a
-                >
-              </dd>
-              <dt>固定ページ数</dt>
-              <dd>A4サイズ3ページ分まで</dd>
-              <dd>A4サイズ3ページ分まで</dd>
-            </dl>
-            <p>*価格は全て税込価格です。</p>
-            <p>
-              *1 Cloudflare PagesはCloudflare,
-              Inc.が提供するホスティングサービスです。
-            </p>
-            <p>*2 NewtはNewt株式会社が提供するCMSサービスです。</p>
-          </div>
+          <p>*2 NewtはNewt株式会社が提供するCMSサービスです。</p>
         </div>
       </section>
       <section id="profile" class="contents">
@@ -161,7 +155,7 @@
           </nav>
         </div>
       </section>
-      <small>© Webdachi</small>
+      <small>© 2023 Webdachi</small>
     </footer>
     <script type="text/javascript" src="general.js"></script>
   </body>
